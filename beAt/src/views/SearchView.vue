@@ -1,8 +1,12 @@
 <template>
   <main class="w-full py-4 flex flex-col items-center">
-    <form class="w-5/6 pl-2 mb-4 h-10 bg-white border hover:border-teal-400 rounded-lg flex flex-row items-center gap-2 overflow-hidden">
+    <form class="w-5/6 pl-2 pr-4 mb-4 h-10 bg-white border hover:border-teal-400 rounded-lg flex flex-row items-center overflow-hidden" @submit.prevent="">
+    <!-- search icon -->
       <font-awesome-icon icon="search" class="text-gray-600 text-xl" />
-      <input type="text" placeholder="Search" class="h-full grow text-gray-500 text-xl pl-2">
+      <!-- search input -->
+      <input type="text" placeholder="Search" class="h-full grow text-gray-500 text-xl pl-2" v-model="searchTerm">
+
+      <font-awesome-icon icon="xmark" class="text-gray-600 text-xl" v-if="searchTerm" @click="searchTerm = null" />
     </form>
 
     <!-- user results -->
@@ -13,5 +17,9 @@
 </template>
 
 <script setup>
-import SmallUserVue from "../components/SmallUser.vue";
+import { ref } from 'vue';
+
+import SmallUserVue from "../components/shared/SmallUser.vue";
+
+const searchTerm = ref(null)
 </script>

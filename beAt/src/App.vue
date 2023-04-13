@@ -13,5 +13,8 @@ import Navbar from '@/components/Navbar.vue'
   
 </template>
 
-<style scoped>
+<style>
+:root {
+  @apply bg-gray-100
+}
 </style>

@@ -4,7 +4,7 @@ import { createPinia } from 'pinia'
 //font-awesome-icons
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
-import { faHouse, faSearch, faMap , faUser, faPlusCircle, faUserPlus } from '@fortawesome/free-solid-svg-icons';
+import { faHouse, faSearch, faMap , faUser, faPlusCircle, faUserPlus, faXmark, faBars, faThumbsUp, faLocationArrow, faComment } from '@fortawesome/free-solid-svg-icons';
 
 
 import App from './App.vue'
@@ -21,6 +21,11 @@ library.add(faMap)
 library.add(faUser)
 library.add(faPlusCircle)
 library.add(faUserPlus)
+library.add(faXmark)
+library.add(faBars)
+library.add(faThumbsUp)
+library.add(faLocationArrow)
+library.add(faComment)
 
 app.use(createPinia())
 app.use(router)

@@ -20,7 +20,7 @@ a {
   transition: all .3s
 }
 nav a.router-link-exact-active {
-  @apply text-teal-300 hover:bg-opacity-60
+  @apply text-gray-400 hover:bg-opacity-60
 }
 .plus {
   @apply text-[2.75rem] text-gray-600
