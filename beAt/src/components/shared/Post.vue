@@ -37,9 +37,9 @@ const liked = ref(false)
 const followed = ref(false)
 
 const like = () => {
-  liked.value = true
+  liked.value = !liked.value
 }
 const follow = () => {
-  followed.value = true
+  followed.value = !followed.value
 }
 </script>

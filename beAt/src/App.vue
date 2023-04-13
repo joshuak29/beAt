@@ -4,7 +4,7 @@ import Navbar from '@/components/Navbar.vue'
 </script>
 
 <template>
-<div class="h-full min-h-screen bg-gray-100">
+<div class="mb-12 bg-gray-100">
   <router-view />
   <footer>
     <navbar />
@@ -16,5 +16,11 @@ import Navbar from '@/components/Navbar.vue'
 <style>
 :root {
   @apply bg-gray-100
+}
+</style>
+<style scoped>
+div {
+  min-height: 100vh;
+  margin-bottom: 3rem
 }
 </style>

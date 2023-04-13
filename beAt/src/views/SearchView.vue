@@ -10,7 +10,7 @@
     </form>
 
     <!-- user results -->
-    <div class="w-full">
+    <div class="w-full" v-if="searchTerm">
       <SmallUserVue v-for="i in 10" :key="i" />
     </div>
   </main>

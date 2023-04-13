@@ -10,11 +10,19 @@
     </div>
 
     <!-- add friend icon -->
-    <div class="grow flex items-center justify-center">
-      <font-awesome-icon icon="user-plus" class="text-2xl" />
+    <div class="grow flex items-center justify-center" @click="follow">
+      <font-awesome-icon icon="user-minus" class="text-2xl text-red-500" v-if="following"/>
+      <font-awesome-icon icon="user-plus" class="text-2xl" v-else/>
     </div>
   </div>
 </template>
 
 <script setup>
+import { ref } from "vue";
+
+const following = ref(false)
+
+const follow = () => {
+  following.value = !following.value
+}
 </script>

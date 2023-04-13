@@ -35,12 +35,12 @@
     </div>
 
     <!-- friends -->
-    <article>
+    <!-- <article>
       <h1 class="text-lg font-semibold mb-2 flex flex-row justify-between"><span>Friends</span> <span class="text-xs text-blue-400 underline">View all</span></h1>
       <div class="flex flex-row gap-2 w-full overflow-scroll">
         <FriendVue v-for="i in 5" :key="i" />
       </div>
-    </article>
+    </article> -->
 
     <!-- posts -->
     <article>
