@@ -55,6 +55,6 @@
 </template>
 
 <script setup>
-import FriendVue from "../components/profile/Friend.vue";
-import PostVue from "../components/shared/Post.vue";
+import FriendVue from "@/components/profile/Friend.vue";
+import PostVue from "@/components/shared/Post.vue";
 </script>

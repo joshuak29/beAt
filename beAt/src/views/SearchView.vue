@@ -20,6 +20,7 @@
 import { ref } from 'vue';
 
 import SmallUserVue from "../components/shared/SmallUser.vue";
+import SearchFormVue from "@/components/shared/SearchForm.vue";
 
 const searchTerm = ref(null)
 </script>
