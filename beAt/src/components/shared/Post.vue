@@ -46,7 +46,6 @@ const liked = ref(false)
 const pinned = ref(false)
 
 const like = () => {
-  console.log(route.fullPath)
   liked.value = !liked.value
 }
 const pin = () => {
