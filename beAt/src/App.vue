@@ -1,6 +1,15 @@
 <script setup>
 // import { RouterLink, RouterView } from 'vue-router'
+import { useMainStore } from "@/stores/main.js"
+
 import Navbar from '@/components/Navbar.vue'
+import { onBeforeMount, onMounted } from "vue"
+
+const mainStore = useMainStore()
+
+onMounted(() => {
+  mainStore.fetchUsers()
+})
 </script>
 
 <template>

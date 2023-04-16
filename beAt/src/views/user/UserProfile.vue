@@ -1,17 +1,19 @@
- <template>
+<template>
   <main class="w-full h-full min-h-screen flex flex-col p-4 gap-6 mt-10">
-    <!--  -->
+    <!-- header -->
     <header class="w-full fixed flex flex-row top-0 left-0 h-10 items-center px-2 pr-4 justify-between bg-gray-100">
       <span class="text-xl font-bold">dark_jnr</span>
-      <font-awesome-icon icon="bars" class="text-xl"/>
+      <font-awesome-icon icon="user-minus" class="text-xl text-red-500" v-if="following"  @click="follow"/>
+      <font-awesome-icon icon="user-plus" class="text-xl" v-else @click="follow"/>
     </header>
+
     <!-- profile pic and posts, followers and following -->
-    <div class="w-full flex flex-row justify-around items-center">
+    <div class="w-full flex flex-row items-center gap-2">
       <!-- pic -->
       <img src="" class="w-24 rounded-full bg-gray-400 aspect-square" />
 
       <!-- followers -->
-      <div class="flex flex-row gap-2 grow justify-center">
+      <div class="flex flex-row gap-2">
         <!-- post  -->
         <div class="text-center">
           <div class="font-semibold text-lg">3</div>
@@ -53,6 +55,13 @@
 </template>
 
 <script setup>
-import FriendVue from "@/components/profile/Friend.vue";
-import PostVue from "@/components/shared/Post.vue";
+import { ref } from "vue";
+
+import PostVue from '@/components/shared/Post.vue'
+
+const following = ref(false)
+
+const follow = () => {
+  following.value = !following.value
+}
 </script>

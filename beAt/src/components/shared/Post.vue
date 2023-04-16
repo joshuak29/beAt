@@ -7,9 +7,14 @@
         <img src="" class="bg-gray-400 aspect-square rounded-full h-10">
         <!-- username and time -->
         <div>
-          <div class="">dark_jnr</div>
+          <!-- username  -->
+          <router-link to="/user"><div>dark_jnr</div></router-link>
+
+          <!-- time  -->
           <div class="text-gray-400 text-xs">2h ago</div>
         </div>
+
+        <!-- pin icon  -->
         <div class="flex grow justify-end">
           <font-awesome-icon icon="location-arrow" class="text-2xl ml-2" :class="{'text-red-500': pinned}" @click="pin" />
         </div>
@@ -27,6 +32,7 @@
     <!-- post action  -->
     <div class="flex justify-between px-1">
       <router-link to="/post" v-if="route.fullPath !== '/post'"><h1 class="text-gray-400 text-xs underline">View all 100 pins</h1></router-link>
+      <div class="text-gray-400 text-xs" v-else>100 Pins</div>
       <div class="flex flex-row gap-2 justify-end grow">
         <font-awesome-icon icon="comment" class="text-2xl text-black ml-2" />
         <font-awesome-icon icon="thumbs-up" class="text-2xl ml-2" :class="{'text-blue-500': liked}" @click="like" />
@@ -38,6 +44,12 @@
 <script setup>
 import { ref } from "vue";
 import { useRouter, useRoute } from 'vue-router';
+
+const props = defineProps = ({
+  user: {
+    type: Object
+  }
+})
 
 const router = useRouter()
 const route = useRoute()

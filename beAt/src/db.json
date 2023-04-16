@@ -1,0 +1,44 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "username": "block_c",
+      "name": "Block Chain",
+      "followers": 24,
+      "following": 11,
+      "posts": 2
+    },
+    {
+      "id": 2,
+      "username": "darth_v",
+      "name": "Darth Vader",
+      "followers": 2,
+      "following": 7,
+      "posts": 1
+    },
+    {
+      "id": 3,
+      "username": "dark_jnr",
+      "name": "Rukundo Josue",
+      "followers": 65,
+      "following": 3,
+      "posts": 0
+    },
+    {
+      "id": 4,
+      "username": "blvck",
+      "name": "Black",
+      "followers": 38,
+      "following": 23,
+      "posts": 1
+    },
+    {
+      "id": 5,
+      "username": "eli_deadz",
+      "name": "Rukundo Elise",
+      "followers": 55,
+      "following": 25,
+      "posts": 3
+    }
+  ]
+}
