@@ -1,7 +1,7 @@
 <template>
   <main class="w-full h-full min-h-screen flex flex-col p-4 gap-6 mt-10">
     <!-- header -->
-    <header class="w-full fixed flex flex-row top-0 left-0 h-10 items-center px-2 pr-4 justify-between bg-gray-100">
+    <header class="w-full fixed flex flex-row top-0 left-0 h-10 items-center px-2 pr-4 justify-between bg-white">
       <span class="text-xl font-bold">dark_jnr</span>
       <font-awesome-icon icon="user-minus" class="text-xl text-red-500" v-if="following"  @click="follow"/>
       <font-awesome-icon icon="user-plus" class="text-xl" v-else @click="follow"/>

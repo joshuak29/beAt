@@ -3,7 +3,7 @@
     <router-link to="/" ><font-awesome-icon icon="house" /></router-link>
     <router-link to="/search" ><font-awesome-icon icon="search" /></router-link>
     <router-link to=""><font-awesome-icon icon="plus-circle" class="plus text-7xl" /></router-link>
-    <router-link to="/map" ><font-awesome-icon icon="map" /></router-link>
+    <router-link to="/inbox" ><font-awesome-icon icon="message" /></router-link>
     <router-link to="/profile" ><font-awesome-icon icon="user" /></router-link>
   </nav>
 </template>

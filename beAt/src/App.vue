@@ -13,7 +13,7 @@ onMounted(() => {
 </script>
 
 <template>
-<div class="mb-12 bg-gray-100">
+<div class="mb-12">
   <router-view />
   <footer>
     <navbar />
@@ -24,7 +24,7 @@ onMounted(() => {
 
 <style>
 :root {
-  @apply bg-gray-100
+  @apply bg-white
 }
 </style>
 <style scoped>

@@ -1,5 +1,5 @@
 <template>
-  <article class="flex flex-col gap-2 mb-8">
+  <article class="flex flex-col gap-2 mb-8 shadow-md rounded-2xl p-2">
     <div class="flex flex-row justify-between items-center">
       <!-- pic and username -->
       <div class="flex flex-row grow gap-4 items-center pr-2">
@@ -35,7 +35,7 @@
       <div class="text-gray-400 text-xs" v-else>100 Pins</div>
       <div class="flex flex-row gap-2 justify-end grow">
         <font-awesome-icon icon="comment" class="text-2xl text-black ml-2" />
-        <font-awesome-icon icon="thumbs-up" class="text-2xl ml-2" :class="{'text-blue-500': liked}" @click="like" />
+        <font-awesome-icon icon="thumbs-up" class="text-2xl ml-2" :class="{'text-brand-blue': liked}" @click="like" />
       </div>
     </div>
   </article>
@@ -45,7 +45,7 @@
 import { ref } from "vue";
 import { useRouter, useRoute } from 'vue-router';
 
-const props = defineProps = ({
+const props = defineProps({
   user: {
     type: Object
   }
