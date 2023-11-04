@@ -6,7 +6,7 @@
         <div class="w-full">
             <form class="login flex flex-col items-stretch gap-4 w-full p-4">
                 <label for="chk" aria-hidden="true" class="mb-4 text-3xl font-bold text-center text-white">Log in</label>
-                <input class="h-12 rounded-lg px-4 font-semibold text-lg" type="email" name="email" placeholder="Email"
+                <input class="h-12 rounded-lg px-4 font-semibold text-lg" type="username" name="username" placeholder="Username"
                     required="">
                 <input class="h-12 rounded-lg px-4 font-semibold text-lg" type="password" name="pswd" placeholder="Password"
                     required="">

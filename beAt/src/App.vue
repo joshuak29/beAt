@@ -1,22 +1,30 @@
 <script setup>
-// import { RouterLink, RouterView } from 'vue-router'
+import { onBeforeMount, onMounted, computed } from "vue"
+import { useRouter } from 'vue-router';
+
 import { useMainStore } from "@/stores/main.js"
 
 import Navbar from '@/components/Navbar.vue'
-import { onBeforeMount, onMounted } from "vue"
+
+const router = useRouter()
+
+const showNav = computed(() => {
+  return !(router.currentRoute.value.name == 'chat');
+})
 
 const mainStore = useMainStore()
 
 onMounted(() => {
   mainStore.fetchUsers()
+  console.log()
 })
 </script>
 
 <template>
-<div class="mb-12">
+<div>
   <router-view />
   <footer>
-    <navbar />
+    <navbar v-if="showNav"/>
   </footer>
 </div>
   
@@ -24,12 +32,11 @@ onMounted(() => {
 
 <style>
 :root {
-  @apply bg-white
+  @apply bg-white;
 }
 </style>
 <style scoped>
 div {
   min-height: 100vh;
-  margin-bottom: 3rem
 }
 </style>

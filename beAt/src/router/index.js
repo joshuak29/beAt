@@ -7,6 +7,7 @@ import SearchView from '@/views/SearchView.vue'
 import PostDetails from '@/views/post/PostDetailsView.vue'
 import UserProfile from '@/views/user/UserProfile.vue'
 import LoginView from '@/views/auth/LoginView.vue'
+import ChatView from '@/views/chat/ChatView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -45,6 +46,11 @@ const router = createRouter({
       name: 'login',
       path: '/login',
       component: LoginView
+    },
+    {
+      name: 'chat',
+      path: '/chat',
+      component: ChatView
     }
   ]
 })
