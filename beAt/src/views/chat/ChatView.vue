@@ -2,7 +2,7 @@
         <main class="w-full h-screen flex flex-col items-center bg-gray-100" >
             <!-- header -->
             <div class="py-1 px-4 flex gap-6 items-center w-full border-b border-b-gray-200 bg-white">
-                <font-awesome-icon icon="angle-left" class="text-xl" />
+                <font-awesome-icon icon="angle-left" class="text-xl" @click="back" />
                 <TinyUserVue />
                 <font-awesome-icon icon="phone" class="text-xl" />
             </div>
@@ -23,10 +23,17 @@
 </template>
 <script setup>
 import { ref } from 'vue'
+import { useRoute, useRouter } from 'vue-router'
 
 import TinyUserVue from '@/components/shared/TinyUser.vue';
 import MyMessageVue from '@/components/chat/MyMessage.vue';
 import ForMessageVue from '@/components/chat/ForMessage.vue';
+
+const router = useRouter();
+
+const back = () => {
+    router.back()
+}
 
 const messages = ['Hey bro!', "Wagwan."]
 

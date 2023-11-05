@@ -1,5 +1,5 @@
 <template>
-  <main class="w-full py-4 flex flex-col items-center">
+  <main class="w-full py-4 flex flex-col items-center mb-12">
       <h1 class="text-2xl font-semibold flex flex-row justify-center mb-2 pb-2">Explore</h1>
       <!-- <span>Explore</span> -->
     <form class="w-5/6 pl-2 pr-4 mb-4 h-10 bg-brand-platinum border hover:border-teal-400 rounded-lg flex flex-row items-center overflow-hidden" @submit.prevent="">

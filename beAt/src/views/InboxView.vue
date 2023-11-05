@@ -1,5 +1,5 @@
 <template>
-  <main class="w-full py-4 flex flex-col items-center p-4 mb-9">
+  <main class="w-full py-4 flex flex-col items-center p-4 mb-12">
     <h1 class="text-2xl font-semibold flex flex-row justify-center mb-2 pb-2">Inbox</h1>
     <form
       class="w-full pl-2 pr-4 mb-8 h-10 bg-brand-platinum border hover:border-teal-400 rounded-lg flex flex-row items-center overflow-hidden"
@@ -15,7 +15,7 @@
     <!-- users -->
     
     <div class="flex flex-col gap-6 w-full">
-      <ChatVue v-for="chat in 8" :key="chat" />
+      <ChatVue v-for="chat in 18" :key="chat" />
     </div>
   </main>
 </template>

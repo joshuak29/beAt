@@ -1,5 +1,5 @@
 <template>
-  <div class="h-full w-full p-2">
+  <div class="h-full w-full p-2 mb-12">
     <div class="h-10 flex items-center pl-2 mb-4">
       <font-awesome-icon
         icon="angle-left"
