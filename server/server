@@ -1,0 +1,15 @@
+- Users
+- Posts
+
+
+-- User
+    - Username, Email & Password
+    - Followers and Following
+    - Pins
+    - Posts
+
+-- Post
+    - User
+    - Pins, Likes and Comments
+
+    

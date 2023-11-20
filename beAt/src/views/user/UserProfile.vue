@@ -2,7 +2,10 @@
   <main class="w-full h-full min-h-screen flex flex-col p-4 gap-6 mt-10">
     <!-- header -->
     <header class="w-full fixed flex flex-row top-0 left-0 h-10 items-center px-2 pr-4 justify-between bg-white">
-      <span class="text-xl font-bold">dark_jnr</span>
+      <div>
+        <font-awesome-icon icon="angle-left" class="text-2xl mr-3" @click="router.go(-1)"/>
+        <span class="text-xl font-bold">dark_jnr</span>
+      </div>
       <font-awesome-icon icon="user-minus" class="text-xl text-red-500" v-if="following"  @click="follow"/>
       <font-awesome-icon icon="user-plus" class="text-xl" v-else @click="follow"/>
     </header>
@@ -56,8 +59,11 @@
 
 <script setup>
 import { ref } from "vue";
+import { useRouter } from "vue-router";
 
 import PostVue from '@/components/shared/Post.vue'
+
+const router = useRouter();
 
 const following = ref(false)
 
