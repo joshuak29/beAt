@@ -31,13 +31,22 @@
 
     <!-- post action  -->
     <div class="flex justify-between px-1">
-      <router-link to="/post" v-if="route.fullPath !== '/post'"><h1 class="text-gray-400 text-xs underline">View all 100 pins</h1></router-link>
-      <div class="text-gray-400 text-xs" v-else>100 Pins</div>
+      <!-- <router-link to="/post" v-if="route.fullPath !== '/post'"><h1 class="text-gray-400 text-xs underline">View all 100 pins</h1></router-link> -->
+      <!-- <div class="text-gray-400 text-xs" v-else>100 Pins</div> -->
       <div class="flex flex-row gap-2 justify-end grow">
-        <font-awesome-icon icon="comment" class="text-2xl text-black ml-2" />
+        <router-link to="/post" v-if="route.fullPath !== '/post'"><font-awesome-icon icon="comment" class="text-2xl text-black ml-2" /></router-link>
         <font-awesome-icon icon="thumbs-up" class="text-2xl ml-2" :class="{'text-brand-blue': liked}" @click="like" />
       </div>
     </div>
+
+    <!-- comment form -->
+    <div>
+        <form class="w-full bg-gray-300 h-10 rounded-3xl flex mb-2 text-sm mt-4" @submit.prevent="">
+            <input type="text" required placeholder="Comment..."
+                class="bg-transparent grow rounded-l-3xl px-4" />
+            <button class="ml-4 mr-6"><font-awesome-icon icon="paper-plane" class="text-2xl text-blue-400" /></button>
+        </form>
+      </div>
   </article>
 </template>
 
